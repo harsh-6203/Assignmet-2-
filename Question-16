@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    // Define the matrices A and B
+    int A[2][2] = {
+        {3, 4},
+        {2, 4}
+    };
+
+    int B[2][2] = {
+        {1, 2},
+        {3, 4}
+    };
+
+    // Define matrix C to store the result
+    int C[2][2];
+
+    // Perform matrix addition
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Print the resulting matrix C
+    printf("Result of matrix addition (C = A + B):\n");
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
